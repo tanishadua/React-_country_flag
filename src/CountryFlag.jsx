@@ -11,9 +11,7 @@ const CountryFlag = () =>{
             const res = await axios.get("https://xcountries-backend.azurewebsites.net/all")
             setFlagData(res.data)
         }catch(err){
-            if(err.response){
-                console.error(`Error fetching data: ${err.response.status}` )
-            }
+                console.error(`Error fetching data: ${err}` )
         }  
     }
     useEffect(()=>{
