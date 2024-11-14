@@ -12,7 +12,7 @@ const CountryFlag = () =>{
             setFlagData(res.data)
         }catch(err){
             if(err.response){
-                console.log(`Error fetching data: ${err.response}` )
+                console.error(`Error fetching data: ${err.response.status}` )
             }
         }  
     }
